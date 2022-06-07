@@ -1,57 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-html, button, input, select, textarea {
+html,
+button,
+input,
+select,
+textarea {
     font-size: 62.5%;
     color: #fff;
 }
 
-body{
+body {
     background-color: #1c1917;
 }
 
-.container{
-    width:100%;
+.container {
+    width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 600px;
 }
 
-.illustration{
+.illustration {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
-.illustration img{
+.illustration img {
     width: 100%;
     max-width: 700px;
 }
 
-.login{
+.login {
     background-color: #4c45b3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
-.login h2{
+.login h2 {
     font-family: 'Fira Code';
     font-size: 4rem;
 }
 
-.login h2 span{
-    font-size: 2rem ;
+.login h2 span {
+    font-size: 2rem;
 }
 
-form{
+form {
     margin-top: 2rem;
     font-size: 2rem;
     width: 100%;
@@ -59,11 +65,11 @@ form{
     text-align: center;
 }
 
-form input::placeholder{
+form input::placeholder {
     color: #fff;
 }
 
-form input{
+form input {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -76,11 +82,11 @@ form input{
     font-family: 'Poppins', sans-serif;
 }
 
-form input:focus{
+form input:focus {
     outline: none;
 }
 
-form a{
+form a {
     color: #d1d1d1;
     text-decoration: none;
     font-size: 1.5rem;
@@ -89,11 +95,11 @@ form a{
     transition: 0.2s;
 }
 
-form a:hover{
+form a:hover {
     color: #FFF;
 }
 
-form #submit{
+form #submit {
     border: 0;
     background-color: #1c1917;
     margin-top: 2rem;
@@ -102,20 +108,32 @@ form #submit{
     transition: 0.2s;
 }
 
-form #submit:hover{
+form #submit:hover {
     background: transparent;
     border: 2px solid #1c1917;
 }
 
-#error{
+#error {
     display: none;
 }
 
-#true{
+#true {
     display: block;
     color: #FFF;
     font-size: 1.5rem;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+
+    }
+
+    .illustration {
+        display: none;
+    }
+
 }
